@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Spam SMS Detector</title>
+       
+     
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    
+
+        <style> 
+
+
+html{
+	height: 100%;
+	margin: 0;
+	
+	background-position: center;
+}
+
+
+body{
+	font-family: Arial, Helvetica,sans-serif;
+    text-align: center;
+    background-image: url(https://wallup.net/wp-content/uploads/2017/03/28/401837-nature-photography-portrait_display.jpg);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+	height: 100%;
+	display: flex;
+  	flex-direction: column;
+}
+
+/* Website Title */
+.container{
+	padding: 30px;
+	position: relative;
+	
+	background-size: 500% 500%;
+	animation: change-gradient 10s ease-in-out infinite;
+}
+@keyframes change-gradient {
+	0%{
+		background-position: 0 50%;
+	}
+	50%{
+		background-position: 100% 50%;
+	}
+	100%{
+		background-position: 0 50%;
+	}
+}
+
+.container-heading{
+    margin: 0;
+}
+
+.container span{
+    color:red;
+}
+
+.description p{
+    font-style: italic;
+    font-size: 14px;
+    margin: 3px 0 0;
+}
+
+/* Text Area */
+.ml-container{
+    margin: 30px 0;
+	flex: 1 0 auto;
+  
+}
+
+.message-box{
+    margin-bottom: 60px;
+    height: 38em;
+    width: 48em;
+}
+
+/* Predict Button */
+.my-cta-button{
+    background: #f9f9f9;
+    border: 2px solid #000000;
+    border-radius: 1000px;
+    box-shadow: 3px 3px #8c8c8c;
+    padding: 23px 69px;
+    color: #000000;
+    display: inline-block;
+    font: italic bold 20px/1 "Calibri", sans-serif;
+    text-align: center;
+}
+
+.my-cta-button:hover{
+    color: #ff0000;
+    border: 2px solid #ff0000;
+}
+
+.my-cta-button:active{
+    box-shadow: 0 0;
+}
+
+
+/* Footer */
+.footer1{
+    font-size: 113px;
+	padding: 20px;
+	flex-shrink: 0;
+	position: relative;
+	background-color: white;
+	animation: change-gradient 10s ease-in-out infinite;
+	
+	
+}
+
+.contact-icon{
+	color: #000000;
+	padding: 7px;
+}
+
+
+.fab.fa-youtube.fa-lg.contact-icon {
+    color: red;
+}
+.fab.fa-github.fa-lg.contact-icon {
+    color: black;
+
+}
+
+.fab.fa-instagram.fa-lg.contact-icon {
+color: deeppink;
+}
+
+.contact-icon:hover{
+	color: #8c8c8c;
+}
+
+.footer-description1{
+	margin: 0;
+	font-size: 39px;
+	background-color:white;
+}
+.fab.fa-linkedin.fa-lg.contact-icon {
+    color: blue;
+}
+
+/* Result */
+.results{
+    padding: 30px 0 0;
+	flex: 1 0 auto;
+}
+
+.danger{
+    color: #ff0000;
+}
+
+.safe{
+    color: green;
+}
+
+.gif{
+	width: 30%;
+}
+
+
+        </style>
+      
+        <!-- Website Title -->
+    	<div class="container">
+    		<h2 class='container-heading'><span>Spam Detection</span> for Mails and SMS</h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App <i class="fas fa-code"></i> with <i class="fas fa-heart"></i> , <i class="fas fa-mug-hot"></i> by <a class="sp" href="https://instagram.com/parth____99?"
+					><span> Parth Nanda </span></a> <p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+        		<textarea class='message-box' name="message" rows="15" cols="75" placeholder="Paste your Male Here.."></textarea><br/>
+        		
+                <input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        <!-- Footer -->
+        <div class='footer1'>
+            <div class="contact">
+                <a target="_blank" href="https://youtube.com/channel/UCsfYekEZiZkoTZze0grRCPg"><i class="fab fa-youtube fa-lg contact-icon"></i></a>
+                <a target="_blank" href="https://github.com/parthnanda7"><i class="fab fa-github fa-lg contact-icon"></i></a>
+                <a target="_blank" href="https://instagram.com/parth____99?"><i class="fab fa-instagram fa-lg contact-icon"></i></a>
+                <a target="_blank" href="http://linkedin.com/in/parth-nanda-890545200"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+            </div>
+            <p class='footer-description1'>Made with ❤️ by PARTH NANDA.</p>
+        </div>
+
+    </body>
+</html>
